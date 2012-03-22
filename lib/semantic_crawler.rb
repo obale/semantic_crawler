@@ -1,5 +1,10 @@
-require "semantic_crawler/freebase/country.rb"
-require "semantic_crawler/freebase/freebase_crawler.rb"
+require "httparty"
 
 module SemanticCrawler
 end
+
+require "semantic_crawler/freebase/crawler"
+
+require "semantic_crawler/freebase/entity"
+require "semantic_crawler/freebase/country"
+

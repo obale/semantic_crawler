@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = SemanticCrawler::VERSION
   s.authors     = ["Alex Oberhauser"]
   s.email       = ["alex.oberhauser@sigimera.org"]
-  s.homepage    = "http://rails.networld.to"
+  s.homepage    = "http://rails.networld.to/libs/semantic-crawler"
   s.summary     = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources."
   s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. ..."
 
@@ -17,6 +17,10 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.0"
+  s.add_dependency "httparty"
+  s.add_dependency "json"
+  s.add_dependency "google-api-client"
+  #s.add_dependency "nokogiri"          # XML Parsing
 
   s.add_development_dependency "sqlite3"
 end

@@ -13,7 +13,17 @@ to bypass complex NLP (natural language processing).
 
 == Examples
 
-TODO
+Fetch Freebase information about Austria:
+
+    >> freebaseCrawler = SemanticCrawler::Freebase::Crawler.new
+    >> austria = freebaseCrawler.getCountry("Austria")
+    >> austria.get
+
+Fetch Freebase information about Germany:
+
+    >> freebaseCrawler = SemanticCrawler::Freebase::Crawler.new
+    >> germany = freebaseCrawler.getCountry("Germany")
+    >> germany.get
 
 
 == License

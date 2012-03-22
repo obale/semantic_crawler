@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = SemanticCrawler::VERSION
   s.authors     = ["Alex Oberhauser"]
   s.email       = ["alex.oberhauser@sigimera.org"]
-  s.homepage    = "http://rails.networld.to/libs/semantic-crawler"
+  s.homepage    = "https://github.com/obale/semantic_crawler"
   s.summary     = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources."
   s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. ..."
 

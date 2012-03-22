@@ -28,7 +28,7 @@ Fetch Freebase information about Germany:
 
 == License
 
-(c) 2012 by Alex Oberhauser for {Networld}[http://networld.to],
+(c) 2012 by Alex Oberhauser for {Sigimera}[http://www.sigimera.org],
 published under MIT license.
 
 

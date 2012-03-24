@@ -38,21 +38,21 @@ You can add this library also as dependency in your Gemfile:
 
 == Examples
 
-Fetch Freebase information about Austria:
+Fetch Factbook information about Austria:
 
+    >> require "semantic_crawler"
     >> austria = SemanticCrawler::Factbook::Country.new("austria")
     >> puts austria.background
+    >> puts austria.climate
 
 == Changelog
 
-With the first version a CHANGELOG will be introduced. see CHANGELOG.rdoc
+see CHANGELOG.rdoc
 
 == License
 
 (c) 2012 by Alex Oberhauser for {Sigimera}[http://www.sigimera.org],
 published under MIT license.
-
-
 
 == Warranty
 

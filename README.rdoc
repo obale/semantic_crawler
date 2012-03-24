@@ -15,6 +15,7 @@ to bypass complex NLP (natural language processing).
 
 === TODO
 
+* LinkedGeoData - LGD(see http://linkedgeodata.org)
 * Freebase
 * Geonames
 * DBPedia

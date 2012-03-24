@@ -1,3 +1,6 @@
+[ATTENTION]  This library is under heavy development and currently not working properly. Please be patient 
+             for a usable version.
+
 = SemanticCrawler
 
 This project encapsulates data gathering from different sources.
@@ -9,6 +12,28 @@ to bypass complex NLP (natural language processing).
 == Supported Sources
 
 * Freebase
+
+=== TODO
+
+* CIA Factbook
+* Geonames
+* DBPedia
+* Different Government Sources
+
+== Installation
+
+    $ git clone git://github.com/obale/semantic_crawler.git
+    $ cd semantic_crawler
+    $ bundle install
+    $ rake build
+    $ rake install pkg/semantic-crawler-*.gem
+
+If the library is stable enough it will be published at rubygems.org. That simplifies the installation.
+
+You can add this library also as dependency in your Gemfile:
+
+    gem "semantic_crawler", :git => "git://github.com/obale/semantic_crawler.git"                   # for the master branch or
+    gem "semantic_crawler", :git => "git://github.com/obale/semantic_crawler.git", :tags => "xyz"   # for the xyz tag
 
 
 == Examples
@@ -25,6 +50,10 @@ Fetch Freebase information about Germany:
     >> germany = freebaseCrawler.getCountry("Germany")
     >> germany.get
 
+
+== {Changelog}[link:CHANGELOG.rdoc]
+
+With the first version a CHANGELOG will be introduced.
 
 == License
 

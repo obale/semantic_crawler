@@ -1,0 +1,5 @@
+= Semantic Crawler CHANGELOG
+
+== 0.0.1
+
+* Initial version that is not usable and not released.

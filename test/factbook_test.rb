@@ -29,4 +29,10 @@ class FactbookTest < ActiveSupport::TestCase
         value = austria.population_total
         assert !value.nil?
     end
+
+    test "get legalsystem property (not wrapped)" do
+        austria = SemanticCrawler::Factbook::Country.new("Austria")
+        value = austria.get_factbook_property("legalsystem")
+        assert !value.nil?
+    end
 end

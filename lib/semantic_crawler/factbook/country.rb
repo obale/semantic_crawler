@@ -74,6 +74,16 @@ module SemanticCrawler
                 get_factbook_property("airports_total")
             end
 
+            # Returns climate description (human readable)
+            def climate
+                get_factbook_property("climate")
+            end
+
+            # Returns location description (human readable)
+            def location
+                get_factbook_property("location")
+            end
+
 
             # Abstract method that allows to fetch factbook properties via
             # xpath

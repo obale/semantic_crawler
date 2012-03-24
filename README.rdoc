@@ -51,9 +51,9 @@ Fetch Freebase information about Germany:
     >> germany.get
 
 
-== {Changelog}[link:CHANGELOG.rdoc]
+== Changelog
 
-With the first version a CHANGELOG will be introduced.
+With the first version a CHANGELOG will be introduced. see CHANGELOG.rdoc
 
 == License
 

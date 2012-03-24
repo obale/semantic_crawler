@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.0"
   s.add_dependency "httparty"
   s.add_dependency "json"
-  s.add_dependency "google-api-client"
-  #s.add_dependency "nokogiri"          # XML Parsing
+  #s.add_dependency "google-api-client" # Freebase API access
+  s.add_dependency "nokogiri"           # XML Parsing
 
   s.add_development_dependency "sqlite3"
 end

@@ -1,0 +1,66 @@
+require 'nokogiri'
+require 'open-uri'
+
+module SemanticCrawler
+    module Factbook
+        class Country
+            @@URI_PREFIX = "http://www4.wiwiss.fu-berlin.de/factbook/data/"
+
+            @@NAMESPACES = {
+                "factbook" => "http://www4.wiwiss.fu-berlin.de/factbook/ns#",
+                "rdfs" => "http://www.w3.org/2000/01/rdf-schema#",
+                "rdf" => "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            }
+
+            attr_reader :country_name
+            attr_reader :url
+
+            # Get Country Information from the CIA Factbook. see
+            # http://www4.wiwiss.fu-berlin.de/factbook/
+            #
+            # Example:
+            #   >> austria = SemanticCrawler::Factbook::Country.new("austria")
+            #   >> puts austria.background
+            #
+            # Argumenst:
+            #   name: (String)
+            def initialize(new_country_name)
+                @country_name = new_country_name.downcase
+                @url = @@URI_PREFIX + @country_name
+                begin
+                    fetch_rdf
+                rescue => e
+                    puts "Not able to get country information, through exception: " + e
+                end
+            end
+
+            # Returns the country name (rdfs:label)
+            def name
+                get_rdfs_property("label", "/rdf:RDF/rdf:Description/factbook:landboundary/factbook:Country")
+            end
+
+            # Returns background information about the country
+            def background
+                get_factbook_property("background")
+            end
+
+            # Returns background information about the country
+            def population_total
+                get_factbook_property("population_total")
+            end
+
+            def get_factbook_property(property_name, prefix = "/" )
+                @doc.xpath(prefix + "/factbook:" + property_name + "/text()", @@NAMESPACES)
+            end
+
+            def get_rdfs_property(property_name, prefix = "/")
+                @doc.xpath(prefix + "/rdfs:" + property_name + "/text()", @@NAMESPACES)
+            end
+
+            private
+            def fetch_rdf
+                @doc = Nokogiri::XML(open(@url))
+            end
+        end
+    end
+end

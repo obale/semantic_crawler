@@ -11,11 +11,11 @@ to bypass complex NLP (natural language processing).
 
 == Supported Sources
 
-* Freebase
+* CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/
 
 === TODO
 
-* CIA Factbook
+* Freebase
 * Geonames
 * DBPedia
 * Different Government Sources
@@ -40,16 +40,8 @@ You can add this library also as dependency in your Gemfile:
 
 Fetch Freebase information about Austria:
 
-    >> freebaseCrawler = SemanticCrawler::Freebase::Crawler.new
-    >> austria = freebaseCrawler.getCountry("Austria")
-    >> austria.get
-
-Fetch Freebase information about Germany:
-
-    >> freebaseCrawler = SemanticCrawler::Freebase::Crawler.new
-    >> germany = freebaseCrawler.getCountry("Germany")
-    >> germany.get
-
+    >> austria = SemanticCrawler::Factbook::Country.new("austria")
+    >> puts austria.background
 
 == Changelog
 

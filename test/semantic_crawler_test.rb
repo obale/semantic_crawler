@@ -16,7 +16,7 @@ class SemanticCrawlerTest < ActiveSupport::TestCase
     test "get austria country information" do
         austria = SemanticCrawler::Freebase::Crawler.new
         countryObj = austria.getCountry("Austria")
-        pp countryObj.get["properties"]["/location/statistical_region/population"]
+        #pp countryObj.get["properties"]["/location/statistical_region/population"]
     end
 
     test "get empty crawler object" do

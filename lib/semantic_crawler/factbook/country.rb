@@ -49,10 +49,40 @@ module SemanticCrawler
                 get_factbook_property("population_total")
             end
 
+            # Returns geographiccoordinates latitude 
+            def latitude
+                get_factbook_property("geographiccoordinates_latitude")
+            end
+
+            # Returns geographiccoordinates longitude
+            def longitude
+                get_factbook_property("geographiccoordinates_longitude")
+            end
+
+            # Returns landboundary
+            def landboundary
+                @doc.xpath("//factbook:landboundary/rdf:Description/@rdf:about", @@NAMESPACES)
+            end
+
+            # Returns terrain description (human readable)
+            def terrain
+                get_factbook_property("terrain")
+            end
+
+            # Returns the total number of airports in the country
+            def airports_total
+                get_factbook_property("airports_total")
+            end
+
+
+            # Abstract method that allows to fetch factbook properties via
+            # xpath
             def get_factbook_property(property_name, prefix = "/" )
                 @doc.xpath(prefix + "/factbook:" + property_name + "/text()", @@NAMESPACES)
             end
 
+            # Abstract method that allows to fetch rdfs properties via
+            # xpath
             def get_rdfs_property(property_name, prefix = "/")
                 @doc.xpath(prefix + "/rdfs:" + property_name + "/text()", @@NAMESPACES)
             end

@@ -11,10 +11,10 @@ to bypass complex NLP (natural language processing).
 == Supported Sources
 
 * CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries
+* [Started] LinkedGeoData - LGD (see http://linkedgeodata.org)
 
 === TODO
 
-* LinkedGeoData - LGD(see http://linkedgeodata.org)
 * Freebase
 * Geonames
 * DBPedia

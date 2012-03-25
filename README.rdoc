@@ -33,8 +33,8 @@ If the library is stable enough it will be published at rubygems.org. That simpl
 
 You can add this library also as dependency in your Gemfile:
 
-    gem "semantic_crawler", :git => "git://github.com/obale/semantic_crawler.git"                   # for the master branch or
-    gem "semantic_crawler", :git => "git://github.com/obale/semantic_crawler.git", :tags => "xyz"   # for the xyz tag
+    gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git"                   # for the master branch or
+    gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git", :tags => "xyz"   # for the xyz tag
 
 
 == Examples

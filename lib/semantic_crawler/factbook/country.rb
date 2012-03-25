@@ -74,6 +74,11 @@ module SemanticCrawler
                 get_factbook_property("airports_total")
             end
 
+            # Returns the number of helicopter airports
+            def heliports
+                get_factbook_property("heliports")
+            end
+
             # Returns climate description (human readable)
             def climate
                 get_factbook_property("climate")

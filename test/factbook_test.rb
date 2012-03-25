@@ -66,6 +66,12 @@ class FactbookTest < ActiveSupport::TestCase
         assert value.to_s.eql?("55")
     end
 
+    test "get austria heliports" do
+        austria = SemanticCrawler::Factbook::Country.new("Austria")
+        value = austria.heliports
+        assert value.to_s.eql?("1")
+    end
+
     test "get austria climate" do
         austria = SemanticCrawler::Factbook::Country.new("Austria")
         value = austria.climate

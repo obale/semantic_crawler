@@ -31,7 +31,8 @@ module SemanticCrawler
                 begin
                     fetch_rdf
                 rescue => e
-                    puts "Not able to get country information, through exception: " + e
+                    puts "Not able to get country information, through exception: "
+                    puts e.message
                 end
             end
 

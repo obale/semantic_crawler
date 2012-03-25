@@ -1,9 +1,9 @@
 = Semantic Crawler CHANGELOG
 
-== 0.1.0
+== 0.0.2
 
-* Add Factbook::Country (see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries)
-* First release
+* Factbook::Country implemented
+* First version that is released to rubygems.org for testing purpose
 
 == 0.0.1
 

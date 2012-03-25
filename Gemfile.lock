@@ -5,7 +5,7 @@ PATH
       httparty
       json
       nokogiri
-      rails (~> 3.2.2)
+      yard
 
 GEM
   remote: http://rubygems.org/
@@ -94,11 +94,13 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.32)
+    yard (0.7.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   jquery-rails
+  rails (~> 3.2.2)
   semantic-crawler!
   sqlite3

@@ -23,7 +23,7 @@ module SemanticCrawler
             #   >> puts austria.background
             #
             # Argumenst:
-            #   name: (String)
+            #   new_country_name: (String)
             def initialize(new_country_name)
                 new_country_name.gsub!(" ", "_")
                 @country_name = new_country_name.downcase

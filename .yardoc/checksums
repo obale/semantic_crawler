@@ -1,6 +1,0 @@
-lib/semantic_crawler/freebase/crawler.rb edcceb6edb6f7aa1accf8a831d170bbc7eb685f4
-lib/semantic_crawler/freebase/entity.rb 59bd3b90088ed29aa0e81baa0580cd377c00d27b
-lib/semantic_crawler.rb e1de637a156762e831b5039e8f1b248f4210baa7
-lib/semantic_crawler/factbook/country.rb 13b0c70be6113f18a96b5fe3a4ce243e21bbc634
-lib/semantic_crawler/freebase/country.rb cdebafb56b8e71fa805f38607064c14e7c69778e
-lib/semantic_crawler/version.rb 6521b14f35f4ceba725a295a90ad9d1b5d17ec2d

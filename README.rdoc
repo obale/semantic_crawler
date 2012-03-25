@@ -23,13 +23,15 @@ to bypass complex NLP (natural language processing).
 
 == Installation
 
+    $ gem install semantic-crawler
+
+Or from source:
+
     $ git clone git://github.com/obale/semantic_crawler.git
     $ cd semantic_crawler
     $ bundle install
     $ rake build
     $ rake install pkg/semantic-crawler-*.gem
-
-If the library is stable enough it will be published at rubygems.org. That simplifies the installation.
 
 You can add this library also as dependency in your Gemfile:
 

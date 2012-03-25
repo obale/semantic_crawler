@@ -1,6 +1,7 @@
 doc/
 *.swp
 .bundle/
+.yardoc
 log/*.log
 pkg/
 test.sh

@@ -61,7 +61,11 @@ module SemanticCrawler
 
             # Returns landboundary
             def landboundary
-                @doc.xpath("//factbook:landboundary/rdf:Description/@rdf:about", @@NAMESPACES)
+                if !@doc.nil?
+                    @doc.xpath("//factbook:landboundary/rdf:Description/@rdf:about", @@NAMESPACES)
+                else
+                    @doc = Nokogiri::XML::Document.new
+                end
             end
 
             # Returns terrain description (human readable)
@@ -93,13 +97,21 @@ module SemanticCrawler
             # Abstract method that allows to fetch factbook properties via
             # xpath
             def get_factbook_property(property_name, prefix = "/" )
-                @doc.xpath(prefix + "/factbook:" + property_name + "/text()", @@NAMESPACES)
+                if !@doc.nil?
+                    @doc.xpath(prefix + "/factbook:" + property_name + "/text()", @@NAMESPACES)
+                else
+                    @doc = Nokogiri::XML::Document.new
+                end
             end
 
             # Abstract method that allows to fetch rdfs properties via
             # xpath
             def get_rdfs_property(property_name, prefix = "/")
-                @doc.xpath(prefix + "/rdfs:" + property_name + "/text()", @@NAMESPACES)
+                if !@doc.nil?
+                    @doc.xpath(prefix + "/rdfs:" + property_name + "/text()", @@NAMESPACES)
+                else
+                    @doc = Nokogiri::XML::Document.new
+                end
             end
 
             private

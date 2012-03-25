@@ -11,7 +11,7 @@ to bypass complex NLP (natural language processing).
 
 == Supported Sources
 
-* CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/
+* CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries
 
 === TODO
 

@@ -1,5 +1,10 @@
 = Semantic Crawler CHANGELOG
 
+== 0.1.0
+
+* Add Factbook::Country (see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries)
+* First release
+
 == 0.0.1
 
 * Initial version that is not usable and not released.

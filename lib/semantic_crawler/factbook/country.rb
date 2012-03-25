@@ -28,7 +28,7 @@ module SemanticCrawler
             #   new_country_name: (String)
             def initialize(new_country_name)
                 @country_name = new_country_name
-                @url = @@URI_PREFIX + @country_name.downcase.gsub(" ", "_")
+                @url = @@URI_PREFIX + @country_name.downcase.gsub(" ", "_").gsub("usa", "united_states")
                 begin
                     fetch_rdf
                 rescue => e

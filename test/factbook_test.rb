@@ -8,7 +8,7 @@ class FactbookTest < ActiveSupport::TestCase
 
     test "init austria country information" do
         austria = SemanticCrawler::Factbook::Country.new("Austria")
-        assert austria.country_name.eql?("austria")
+        assert austria.country_name.eql?("Austria")
         assert austria.url.eql?("http://www4.wiwiss.fu-berlin.de/factbook/data/austria")
     end
 

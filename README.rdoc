@@ -1,5 +1,4 @@
-[ATTENTION]  This library is under heavy development and currently not working properly. Please be patient 
-             for a usable version.
+[ATTENTION]  This library is under heavy development. Please be patient for a usable version.
 
 = SemanticCrawler
 

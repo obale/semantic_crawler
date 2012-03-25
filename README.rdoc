@@ -20,6 +20,7 @@ to bypass complex NLP (natural language processing).
 * DBPedia
 * Different Government Sources
 
+
 == Installation
 
     $ gem install semantic-crawler
@@ -56,6 +57,10 @@ see CHANGELOG.rdoc
 
 * Ruby 1.8.7-p358 and Rails 3.2.2
 * Ruby 1.9.3-p125 and Rails 3.2.2
+
+=== Development Branch Health
+
+{<img src="https://secure.travis-ci.org/obale/semantic_crawler.png?branch=master"/>}[https://github.com/obale/semantic_crawler/]
 
 
 == License

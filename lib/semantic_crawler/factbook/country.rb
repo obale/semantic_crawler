@@ -25,6 +25,7 @@ module SemanticCrawler
             # Argumenst:
             #   name: (String)
             def initialize(new_country_name)
+                new_country_name.gsub!(" ", "_")
                 @country_name = new_country_name.downcase
                 @url = @@URI_PREFIX + @country_name
                 begin

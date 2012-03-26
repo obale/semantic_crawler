@@ -15,7 +15,9 @@ module SemanticCrawler
         # * Tropical Cyclones
         # * Volcanoes
         class Feed
-            # [TODO] Implement this class.
+            # Initializes the gdacs.org feed URL. If not specified the default
+            # URL (http://new.gdacs.org/xml/rss.xml) is used. Normally the
+            # feed URL should not be changed.
             def initialize(new_feed_url = "http://new.gdacs.org/xml/rss.xml")
                 @feed_url = new_feed_url
             end

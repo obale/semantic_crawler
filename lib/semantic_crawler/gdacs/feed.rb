@@ -85,6 +85,7 @@ module SemanticCrawler
                 end
             end
 
+            # Returns the whole RSS feed as XML
             def xml_document
                 @root_node.to_s
             end

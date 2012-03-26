@@ -1,5 +1,12 @@
 = Semantic Crawler CHANGELOG
 
+== 0.0.3
+
+* Adding the modules: Gdacs, LinkedGeoData, Freebase
+* Improving documentation
+* Better Exception Handling
+* Minor bug fixing
+
 == 0.0.2
 
 * Factbook::Country implemented

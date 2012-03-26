@@ -46,12 +46,31 @@ Or from source:
 
 == Examples
 
+    >> require "semantic_crawler"
+
+=== Factbook
+
 Fetch Factbook information about Austria:
 
-    >> require "semantic_crawler"
     >> austria = SemanticCrawler::Factbook::Country.new("austria")
     >> puts austria.background
     >> puts austria.climate
+
+=== GDACS
+
+    >> feed = SemanticCrawler::Gdacs::Feed.new
+    >> puts feed.title.to_s
+    >> puts feed.description.to_s
+    >> feed.items.each do |item|
+    >>      puts item.title.to_s
+    >>      puts item.eventtype.to_s
+    >>      item.resources.each do |resource|
+    >>          puts resource.url.to_s
+    >>      end
+    >> end
+
+Fetch GDACS.org feed
+
 
 == Changelog
 

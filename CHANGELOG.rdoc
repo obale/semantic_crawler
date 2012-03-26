@@ -2,7 +2,7 @@
 
 == 0.0.3
 
-* Adding the modules: Gdacs, LinkedGeoData, Freebase
+* Implementing the Gdacs module
 * Improving documentation
 * Better Exception Handling
 * Minor bug fixing

@@ -1,9 +1,14 @@
+# [XXX] The current implementation outputs only an unreadable JSON object.
 class SemanticCrawler::Freebase::Country < SemanticCrawler::Freebase::Entity
+    # The Freebase object that should be retrieved
     attr_accessor :input_name
+    # The URL that points to the JSON object.
     attr_accessor :json_link
 
+    # The URL prefix of an Freebase experimental JSON entity.
     @@uri_prefix = "http://www.freebase.com/experimental/topic/standard/en/"
 
+    # Creates a new Freebase object (JSON)
     def initialize
         @input_name = nil
         @html_link = nil

@@ -8,15 +8,21 @@ module SemanticCrawler
         # Extracted from the RDF Dump of the CIA Factbook. Contains all
         # relevant, but maybe deprecated information about countries.
         class Country
+            # The prefixed used for each country
             @@URI_PREFIX = "http://www4.wiwiss.fu-berlin.de/factbook/data/"
 
+            # Predefined RDFS/OWL namespaces used for RDF file parsing.
             @@NAMESPACES = {
                 "factbook" => "http://www4.wiwiss.fu-berlin.de/factbook/ns#",
                 "rdfs" => "http://www.w3.org/2000/01/rdf-schema#",
                 "rdf" => "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
             }
 
+            # Country name given as input during the object creation.
             attr_reader :country_name
+
+            # The complete URL of the country. Could be also wrong, 
+            # if the country_name is not valid.
             attr_reader :url
 
             # Get Country Information from the CIA Factbook. see
@@ -119,6 +125,7 @@ module SemanticCrawler
             end
 
             private
+            # Retrieves the RDF stream
             def fetch_rdf
                 @doc = Nokogiri::XML(open(@url))
             end

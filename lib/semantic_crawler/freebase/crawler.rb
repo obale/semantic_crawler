@@ -1,5 +1,6 @@
 module SemanticCrawler
     module Freebase
+        # [XXX] This class should be deleted. The country object could be called directly.
         class Crawler
             # Returns a country object that contains all relevant
             # information that could be extracted from freebase.com

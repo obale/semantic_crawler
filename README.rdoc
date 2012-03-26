@@ -35,6 +35,10 @@ Or from source:
 
 You can add this library also as dependency in your Gemfile:
 
+    gem "semantic-cralwer"
+
+Or from source:
+
     gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git"                   # for the master branch or
     gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git", :tags => "xyz"   # for the xyz tag
 

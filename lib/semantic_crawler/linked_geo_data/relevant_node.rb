@@ -3,8 +3,8 @@
 module SemanticCrawler
     module LinkedGeoData
         class RelevantNode
+            # [TODO] Implement this class
             def initialize
-                puts "[TODO] Implement this class"
             end
         end
     end

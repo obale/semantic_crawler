@@ -5,6 +5,8 @@ require 'open-uri'
 
 module SemanticCrawler
     module Factbook
+        # Extracted from the RDF Dump of the CIA Factbook. Contains all
+        # relevant, but maybe deprecated information about countries.
         class Country
             @@URI_PREFIX = "http://www4.wiwiss.fu-berlin.de/factbook/data/"
 
@@ -32,8 +34,7 @@ module SemanticCrawler
                 begin
                     fetch_rdf
                 rescue => e
-                    puts "Not able to get country information, through exception: "
-                    puts e.message
+                    puts "Not able to get country information, through exception: " + e.message
                 end
             end
 

@@ -85,6 +85,10 @@ module SemanticCrawler
                 end
             end
 
+            def xml_document
+                @root_node.to_s
+            end
+
             private
                 # Retrieves the RSS feed
                 def fetch_feed

@@ -58,6 +58,8 @@ Fetch Factbook information about Austria:
 
 === GDACS
 
+Parse crisis information feed from GDACS.org:
+
     >> feed = SemanticCrawler::Gdacs::Feed.new
     >> puts feed.title.to_s
     >> puts feed.description.to_s
@@ -68,8 +70,6 @@ Fetch Factbook information about Austria:
     >>          puts resource.url.to_s
     >>      end
     >> end
-
-Fetch GDACS.org feed
 
 
 == Changelog

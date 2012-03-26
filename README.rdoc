@@ -11,8 +11,8 @@ to bypass complex NLP (natural language processing).
 == Supported Sources
 
 * CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries
+* GDACS (see http://gdacs.org)
 * [Started] LinkedGeoData - LGD (see http://linkedgeodata.org)
-* [Started] GDACS (see http://gdacs.org)
 * [Started] Freebase (see http://freebase.com)
 
 === TODO

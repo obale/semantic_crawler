@@ -12,6 +12,9 @@ rescue LoadError
   RDoc::Task = Rake::RDocTask
 end
 
+require 'rake'
+require 'rspec/core/rake_task'
+
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'SemanticCrawler'
@@ -33,4 +36,6 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-task :default => :test
+RSpec::Core::RakeTask.new(:spec)
+
+task :default => [ :test, :spec ]

@@ -33,7 +33,7 @@ describe SemanticCrawler::Gdacs do
         be_valid @feed.atom_link.to_s.start_with?("http")
     end
 
-    it "get channel item(s)" do
+    it "get channel items + resources" do
         items = @feed.items
         be_valid !items.nil?
         items.each do |item|
@@ -65,6 +65,20 @@ describe SemanticCrawler::Gdacs do
                 be_valid !resource.url.nil?
                 be_valid !resource.type.nil?
             end
+        end
+    end
+
+    it "test emergency feed" do
+        @emergency_feed = SemanticCrawler::Gdacs::EmergencyFeed.new
+        @emergency_feed.title.to_s.should_not be_empty
+        @emergency_feed.description.to_s.should_not be_empty
+        items = @emergency_feed.items
+        items.each do |item|
+            item.title.to_s.should_not be_empty
+            item.eventType.to_s.should_not be_empty
+            item.pubDate.to_s.should_not be_empty
+            item.lastUpdate.to_s.should_not be_empty
+            item.glide.to_s.should_not be_empty
         end
     end
 

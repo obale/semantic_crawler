@@ -1,5 +1,9 @@
 = Semantic Crawler CHANGELOG
 
+== 0.0.4
+
+* Adding emergency feed to Gdacs module
+
 == 0.0.3
 
 * Implementing the Gdacs module

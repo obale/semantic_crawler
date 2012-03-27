@@ -1,0 +1,6 @@
+--title "Semantic Crawler Library for Ruby"
+--output-dir doc/yard
+--markup rdoc
+--readme README.rdoc
+-
+CHANGELOG.rdoc

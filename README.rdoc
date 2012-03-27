@@ -34,7 +34,7 @@ Or from source:
 
 You can add this library also as dependency in your Gemfile:
 
-    gem "semantic-cralwer"
+    gem "semantic-crawler"
 
 Or from source:
 

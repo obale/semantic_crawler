@@ -32,25 +32,21 @@ module SemanticCrawler
 
             # [OPTIONAL] Returns the gdacs:description
             def description
-                puts query_root_node("gdacs:description/text()", @@NAMESPACES)
                 query_root_node("gdacs:description/text()", @@NAMESPACES)
             end
 
             # [OPTIONAL] Returns the gdacs:acknowledgements
             def acknowledgements
-                puts query_root_node("gdacs:acknowledgements/text()", @@NAMESPACES)
                 query_root_node("gdacs:acknowledgements/text()", @@NAMESPACES)
             end
 
             # [OPTIONAL] Returns the gdacs:accesslevel
             def accesslevel
-                puts query_root_node("gdacs:accesslevel/text()", @@NAMESPACES)
                 query_root_node("gdacs:accesslevel/text()", @@NAMESPACES)
             end
 
             # [OPTIONAL] Returns the gdacs:xslt. Only for XML resources!
             def xslt
-                puts query_root_node("gdacs:xslt/text()", @@NAMESPACES)
                 query_root_node("gdacs:xslt/text()", @@NAMESPACES)
             end
 

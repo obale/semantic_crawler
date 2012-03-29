@@ -35,12 +35,14 @@ module SemanticCrawler
             # Argumenst:
             #   new_country_name: (String)
             def initialize(new_country_name)
-                @country_name = new_country_name
-                @url = @@URI_PREFIX + @country_name.downcase.gsub(" ", "_").gsub("usa", "united_states")
-                begin
-                    fetch_rdf
-                rescue => e
-                    puts "Not able to get country information, through exception: " + e.message
+                if !new_country_name.nil?
+                    @country_name = new_country_name
+                    @url = @@URI_PREFIX + @country_name.downcase.gsub(" ", "_").gsub("usa", "united_states")
+                    begin
+                        fetch_rdf
+                    rescue => e
+                        puts "Not able to get country information, through exception: " + e.message
+                    end
                 end
             end
 
@@ -74,7 +76,7 @@ module SemanticCrawler
                 if !@doc.nil?
                     @doc.xpath("//factbook:landboundary/rdf:Description/@rdf:about", @@NAMESPACES)
                 else
-                    @doc = Nokogiri::XML::Document.new
+                    nil
                 end
             end
 
@@ -110,7 +112,7 @@ module SemanticCrawler
                 if !@doc.nil?
                     @doc.xpath(prefix + "/factbook:" + property_name + "/text()", @@NAMESPACES)
                 else
-                    @doc = Nokogiri::XML::Document.new
+                    nil
                 end
             end
 
@@ -120,7 +122,7 @@ module SemanticCrawler
                 if !@doc.nil?
                     @doc.xpath(prefix + "/rdfs:" + property_name + "/text()", @@NAMESPACES)
                 else
-                    @doc = Nokogiri::XML::Document.new
+                    nil
                 end
             end
 

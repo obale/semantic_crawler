@@ -35,8 +35,6 @@ require "semantic_crawler/dbpedia"
 require "semantic_crawler/geo_names"
 
 # Freebase.com - module: Freebase
-require "semantic_crawler/freebase/crawler"
-require "semantic_crawler/freebase/entity"
 require "semantic_crawler/freebase/country"
 
 # LinkedGeoData.org - module: LinkedGeoData

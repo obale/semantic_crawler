@@ -6,6 +6,18 @@ describe SemanticCrawler::Factbook do
         @austria = SemanticCrawler::Factbook::Country.new("Austria")
     end
 
+    it "test nil country" do
+        wrongCountry = SemanticCrawler::Factbook::Country.new(nil)
+        wrongCountry.url.nil?.should == true
+    end
+
+    it "test unknown country" do
+        wrongCountry = SemanticCrawler::Factbook::Country.new("xyz")
+        wrongCountry.landboundary.nil?.should == true
+        wrongCountry.background.nil?.should == true
+        wrongCountry.name.nil?.should == true
+    end
+
     it "init austria country information" do
         be_valid @austria.country_name.eql?("Austria")
         be_valid @austria.url.eql?("http://www4.wiwiss.fu-berlin.de/factbook/data/austria")

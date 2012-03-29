@@ -69,6 +69,16 @@ Parse crisis information feed from GDACS.org:
     >>      end
     >> end
 
+Get information from the the GDACS.org emergency feed:
+
+    >> emergency_feed = SemanticCrawler::Gdacs::EmergencyFeed.new
+    >> puts emergency_feed.title.to_s
+    >> items = @emergency_feed.items
+    >> items.each do |item|
+    >>      puts item.title.to_s
+    >>      puts item.link.to_s
+    >> end
+
 
 == Changelog
 

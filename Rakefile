@@ -29,6 +29,9 @@ Bundler::GemHelper.install_tasks
 
 require 'rake/testtask'
 
+# Import own written tasks
+Dir.glob('lib/tasks/*.rake').each { |r| import r }
+
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.libs << 'test'

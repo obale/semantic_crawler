@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    semantic-crawler (0.0.3)
+    semantic-crawler (0.0.4)
       httparty
       json
       nokogiri
@@ -96,6 +96,12 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.9.0)
+    simplecov (0.6.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -117,5 +123,7 @@ DEPENDENCIES
   rails (~> 3.2.2)
   rspec-rails
   semantic-crawler!
+  simplecov
+  simplecov-rcov
   sqlite3
   yard

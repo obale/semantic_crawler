@@ -2,9 +2,12 @@
 
 require 'json'
 
-# [XXX] The current implementation outputs only an unreadable JSON object.
 module SemanticCrawler
     module Freebase
+        # Freebase Country entity. Currently it is very abstract and
+        # could be each entry on Freebase.
+        #
+        # [XXX] The current implementation outputs only an unreadable JSON object.
         class Country
             include HTTParty
             # The Freebase object that should be retrieved

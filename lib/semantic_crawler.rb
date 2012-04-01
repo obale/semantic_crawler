@@ -34,10 +34,14 @@ require "semantic_crawler/dbpedia"
 # GeoNames.org - module: GeoNames
 require "semantic_crawler/geo_names"
 
-# Freebase.com - module: Freebase
-require "semantic_crawler/freebase/country"
-
 # LinkedGeoData.org - module: LinkedGeoData
 require "semantic_crawler/linked_geo_data"
 require "semantic_crawler/linked_geo_data/relevant_node"
+
+# Fao.org - module: Fao
+require "semantic_crawler/fao"
+require "semantic_crawler/fao/country"
+
+# Freebase.com - module: Freebase
+require "semantic_crawler/freebase/country"
 

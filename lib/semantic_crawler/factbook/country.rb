@@ -47,6 +47,8 @@ module SemanticCrawler
             end
 
             # Returns the country name (rdfs:label)
+            # XXX: If nothing was found this method returns 
+            # <?xml version="1.0"?>
             def name
                 get_rdfs_property("label", "/rdf:RDF/rdf:Description/factbook:landboundary/factbook:Country")
             end

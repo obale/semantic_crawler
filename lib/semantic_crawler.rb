@@ -14,11 +14,11 @@ require "httparty"
 # The existing modules are extended stepwise and additional
 # sources are added in the future.
 require 'logger'
+
+# Top module that contains the whole library. Each sub-module
+# is wrappes one source.
 module SemanticCrawler
-    # TODO: Read out path (absolute)
-    # TODO: Check environment production/test/development and write different
-    # files.
-    $log = Logger.new('log/logfile.log', 'daily')
+    $log = Logger.new(File.expand_path('../../log/logfile.log', __FILE__), 'daily')
 end
 
 # CIA Factbook RDF Dump - module: Factbook

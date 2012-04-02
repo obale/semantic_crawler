@@ -4,7 +4,7 @@
 
 * Adding emergency feed to Gdacs module
 * Adding basic module structure for all modules (not all implemented)
-* Adding basic spec sructure for all modules (not all implemented)
+* Adding basic rspec sructure for all modules (not all implemented)
 
 == 0.0.3
 

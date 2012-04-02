@@ -18,7 +18,7 @@ require 'logger'
 # Top module that contains the whole library. Each sub-module
 # is wrappes one source.
 module SemanticCrawler
-    $log = Logger.new(File.expand_path('../../log/logfile.log', __FILE__), 'daily')
+    $log = Logger.new(File.expand_path('../../log/semantic-crawler.log', __FILE__), 'daily')
 end
 
 # CIA Factbook RDF Dump - module: Factbook

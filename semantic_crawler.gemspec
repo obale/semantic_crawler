@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
     s.email       = ["alex.oberhauser@sigimera.org"]
     s.homepage    = "https://github.com/obale/semantic_crawler"
     s.summary     = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources."
-    s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. Currently country information from Factbook and crisis information from GDACS.org are supported."
+    s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. Currently country information from Factbook and FAO (Food and Agriculture Organization of the United Nations) and crisis information from GDACS.org are supported."
 
     s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc", "CHANGELOG.rdoc"]
     s.test_files = Dir["test/**/*"]

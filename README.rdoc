@@ -10,6 +10,7 @@ to bypass complex NLP (natural language processing).
 
 * CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries
 * GDACS (see http://gdacs.org)
+* FAO - Food and Agriculture Organization of the United Nations (see http://www.fao.org)
 * [Started] LinkedGeoData - LGD (see http://linkedgeodata.org)
 * [Started] Freebase (see http://freebase.com)
 
@@ -38,8 +39,8 @@ You can add this library also as dependency in your Gemfile:
 
 Or from source:
 
-    gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git"                   # for the master branch or
-    gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git", :tags => "xyz"   # for the xyz tag
+    gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git"                       # for the master branch or
+    gem "semantic-crawler", :git => "git://github.com/obale/semantic_crawler.git", :branch => "develop" # for the developer branch
 
 
 == Examples
@@ -78,6 +79,14 @@ Get information from the the GDACS.org emergency feed:
     >>      puts item.title.to_s
     >>      puts item.link.to_s
     >> end
+
+=== FAO
+
+Country information from {FAO}[http://www.fao.org]:
+
+    >> austria = SemanticCrawler::Fao::Country.new("Austria")
+    >> puts austria.name_currency("en")
+    >> puts austria.official_name("es")
 
 
 == Changelog

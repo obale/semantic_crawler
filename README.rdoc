@@ -82,7 +82,7 @@ Get information from the the GDACS.org emergency feed:
 
 === FAO
 
-Country information from {FAO}{http://www.fao.org}:
+Country information from {FAO}[http://www.fao.org]:
 
     >> austria = SemanticCrawler::Fao::Country.new("Austria")
     >> puts austria.name_currency("en")

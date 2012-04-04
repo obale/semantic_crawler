@@ -6,9 +6,19 @@ describe SemanticCrawler::Fao do
         @obj = SemanticCrawler::Fao::Country.new("Austria")
     end
 
-    it "init Country object" do
+    it "init empty country object" do
+        @obj = SemanticCrawler::Fao::Country.new(nil)
+        @obj.country_name.should.eql?(nil)
+        @obj.url.should eq("http://www.fao.org/countryprofiles/geoinfo/geopolitical/data/")
+    end
+
+    it "check austria object" do
         @obj.country_name.should.eql?("Austria")
         @obj.url.should eq("http://www.fao.org/countryprofiles/geoinfo/geopolitical/data/Austria")
+    end
+
+    it "get austria RDF/XML dump" do
+        be_valid !@obj.xml_document.empty?
     end
 
     it "get austria type" do

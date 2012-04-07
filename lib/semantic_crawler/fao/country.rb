@@ -3,6 +3,8 @@ module SemanticCrawler
         # Represents Food and Agriculture information about one country.
         class Country
 
+            @@URI_PREFIX = "http://www.fao.org/countryprofiles/geoinfo/geopolitical/data/"
+
             # Namespace hash
             @@NAMESPACES = {
                 "rdf" => "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -21,12 +23,14 @@ module SemanticCrawler
             # Initialize a new Fao country object
             def initialize(new_country_name)
                 @country_name = new_country_name
-                @url = "http://www.fao.org/countryprofiles/geoinfo/geopolitical/data/#{@country_name}"
-                @root_node = nil
-                begin
-                    fetch_rdf
-                rescue => e
-                    $log.error("Not able to get country information, through exception: #{e}")
+		if !@country_name.nil?
+                    @url = @@URI_PREFIX + @country_name.gsub(" ", "_").gsub("USA", "United_States")
+                    @root_node = nil
+                    begin
+                        fetch_rdf
+                    rescue => e
+                        $log.error("Not able to get country information, through exception: #{e}")
+                    end
                 end
             end
 
@@ -106,9 +110,11 @@ module SemanticCrawler
             def is_in_group_name
                 returnGroup = []
                 group = query_root_node("fao:isInGroup/@rdf:resource", @@NAMESPACES)
-                group.each do |entry|
-                    returnGroup << entry.to_s.split("/")[7]
-                end
+		if !group.nil?
+                    group.each do |entry|
+                        returnGroup << entry.to_s.split("/")[7]
+                    end
+		end
                 returnGroup
             end
 
@@ -117,9 +123,11 @@ module SemanticCrawler
             def is_in_group_url
                 returnGroup = []
                 group = query_root_node("fao:isInGroup/@rdf:resource", @@NAMESPACES)
-                group.each do |entry|
-                    returnGroup << entry.to_s
-                end
+		if !group.nil?
+                    group.each do |entry|
+                        returnGroup << entry.to_s
+                    end
+		end
                 returnGroup
             end
 
@@ -128,9 +136,11 @@ module SemanticCrawler
             def has_boarder_with_url
                 returnGroup = []
                 group = query_root_node("fao:hasBorderWith/@rdf:resource", @@NAMESPACES)
-                group.each do |entry|
-                    returnGroup << entry.to_s
-                end
+		if !group.nil?
+                    group.each do |entry|
+                        returnGroup << entry.to_s
+                    end
+		end
                 returnGroup
             end
 
@@ -139,8 +149,10 @@ module SemanticCrawler
             def has_boarder_with_name
                 returnGroup = []
                 group = query_root_node("fao:hasBorderWith/@rdf:resource", @@NAMESPACES)
-                group.each do |entry|
-                    returnGroup << entry.to_s.split("/")[7]
+		if !group.nil?
+                    group.each do |entry|
+                        returnGroup << entry.to_s.split("/")[7]
+                    end
                 end
                 returnGroup
             end

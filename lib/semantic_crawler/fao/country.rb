@@ -23,7 +23,7 @@ module SemanticCrawler
             # Initialize a new Fao country object
             def initialize(new_country_name)
                 @country_name = new_country_name
-		if !@country_name.nil?
+                if !@country_name.nil?
                     @url = @@URI_PREFIX + @country_name.gsub(" ", "_").gsub("USA", "United_States")
                     @root_node = nil
                     begin
@@ -110,11 +110,11 @@ module SemanticCrawler
             def is_in_group_name
                 returnGroup = []
                 group = query_root_node("fao:isInGroup/@rdf:resource", @@NAMESPACES)
-		if !group.nil?
+                if !group.nil?
                     group.each do |entry|
                         returnGroup << entry.to_s.split("/")[7]
                     end
-		end
+                end
                 returnGroup
             end
 
@@ -123,11 +123,11 @@ module SemanticCrawler
             def is_in_group_url
                 returnGroup = []
                 group = query_root_node("fao:isInGroup/@rdf:resource", @@NAMESPACES)
-		if !group.nil?
+                if !group.nil?
                     group.each do |entry|
                         returnGroup << entry.to_s
                     end
-		end
+                end
                 returnGroup
             end
 
@@ -136,11 +136,11 @@ module SemanticCrawler
             def has_boarder_with_url
                 returnGroup = []
                 group = query_root_node("fao:hasBorderWith/@rdf:resource", @@NAMESPACES)
-		if !group.nil?
+                if !group.nil?
                     group.each do |entry|
                         returnGroup << entry.to_s
                     end
-		end
+                end
                 returnGroup
             end
 
@@ -149,7 +149,7 @@ module SemanticCrawler
             def has_boarder_with_name
                 returnGroup = []
                 group = query_root_node("fao:hasBorderWith/@rdf:resource", @@NAMESPACES)
-		if !group.nil?
+                if !group.nil?
                     group.each do |entry|
                         returnGroup << entry.to_s.split("/")[7]
                     end
@@ -200,11 +200,11 @@ module SemanticCrawler
             end
 
             private
-                # Retrieves the RDF file
-                def fetch_rdf
-                    @doc = Nokogiri::XML(open(@url))
-                    @root_node = @doc.xpath("/rdf:RDF/rdf:Description", @@NAMESPACES)
-                end
+            # Retrieves the RDF file
+            def fetch_rdf
+                @doc = Nokogiri::XML(open(@url))
+                @root_node = @doc.xpath("/rdf:RDF/rdf:Description", @@NAMESPACES)
+            end
         end
     end
 end

@@ -7,7 +7,7 @@ describe SemanticCrawler::Fao do
     end
 
     it "check papua new guinea object" do
-        @obj.country_name.should.eql?("")
+        @obj.country_name.should eq("Papua New Guinea")
         @obj.url.should eq("http://www.fao.org/countryprofiles/geoinfo/geopolitical/data/Papua_New_Guinea")
     end
 

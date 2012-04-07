@@ -4,6 +4,7 @@
 /.bundle/
 /.yardoc
 /log/*.log
+/log/*.log.*
 /pkg/
 /test.sh
 test/dummy/log/*.log

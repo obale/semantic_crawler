@@ -9,7 +9,7 @@ describe SemanticCrawler::Fao do
     it "init empty country object" do
         @obj = SemanticCrawler::Fao::Country.new(nil)
         @obj.country_name.should.eql?(nil)
-        @obj.url.should eq("http://www.fao.org/countryprofiles/geoinfo/geopolitical/data/")
+        @obj.url.should eq(nil)
     end
 
     it "check austria object" do

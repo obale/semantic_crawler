@@ -63,12 +63,12 @@ describe SemanticCrawler::Fao do
 
     it "get has boarder with (URL)" do
         group = @obj.has_boarder_with_url
-	group.should.eql?(nil)
+        group.include?("http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/Indonesia").should be_true
     end
 
     it "get has boarder with (Name)" do
         group = @obj.has_boarder_with_name
-	group.should.eql?(nil)
+        group.include?("Indonesia").should be_true
     end
 
     it "get same as links" do

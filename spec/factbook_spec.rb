@@ -23,6 +23,10 @@ describe SemanticCrawler::Factbook do
         be_valid @austria.url.eql?("http://www4.wiwiss.fu-berlin.de/factbook/data/austria")
     end
 
+    it "get doc dump" do
+        be_valid !@austria.xml_document.empty?
+    end
+
     it "get austria name" do
         value = @austria.name
         be_valid value.to_s.eql?("Austria")

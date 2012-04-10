@@ -153,9 +153,11 @@ module SemanticCrawler
             def resources
                nodeset = query_root_node("gdacs:resources/gdacs:resource", @@NAMESPACES)
                @items = []
-               nodeset.each do |item|
-                   item_obj = SemanticCrawler::Gdacs::Resource.new(item)
-                   @items << item_obj
+               if !nodeset.nil?
+                   nodeset.each do |item|
+                       item_obj = SemanticCrawler::Gdacs::Resource.new(item)
+                       @items << item_obj
+                   end
                end
                @items
             end

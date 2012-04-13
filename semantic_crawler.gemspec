@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
     s.summary     = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources."
     s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. Currently country information from Factbook and FAO (Food and Agriculture Organization of the United Nations) and crisis information from GDACS.org are supported."
 
-    s.files = Dir["{app,config,db,lib,log}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc", "CHANGELOG.rdoc"]
+    s.files = Dir["{app,config,db,lib,log}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
     s.test_files = Dir["test/**/*"]
 
     s.add_dependency "httparty"

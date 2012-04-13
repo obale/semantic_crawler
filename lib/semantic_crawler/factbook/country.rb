@@ -118,6 +118,10 @@ module SemanticCrawler
                 end
             end
 
+            def xml_document
+                @doc.to_s
+            end
+
             # Abstract method that allows to fetch rdfs properties via
             # xpath
             def get_rdfs_property(property_name, prefix = "/")

@@ -35,13 +35,15 @@ module SemanticCrawler
 
             # Get rss/channel/item*
             def items
-               nodeset = query_root_node("item")
-               @items = []
-               nodeset.each do |item|
-                   item_obj = SemanticCrawler::Gdacs::EmergencyFeedItem.new(item)
-                   @items << item_obj
-               end
-               @items
+                nodeset = query_root_node("item")
+                @items = []
+                if !nodeset.nil?
+                    nodeset.each do |item|
+                        item_obj = SemanticCrawler::Gdacs::EmergencyFeedItem.new(item)
+                        @items << item_obj
+                    end
+                end
+                @items
             end
 
             # Query the root_node
@@ -57,11 +59,11 @@ module SemanticCrawler
             end
 
             private
-                # Retrieves the RSS feed
-                def fetch_feed
-                    @doc = Nokogiri::XML(open(@url))
-                    @root_node = @doc.xpath("/rss/channel")
-                end
+            # Retrieves the RSS feed
+            def fetch_feed
+                @doc = Nokogiri::XML(open(@url))
+                @root_node = @doc.xpath("/rss/channel")
+            end
         end
     end
 end

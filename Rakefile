@@ -21,7 +21,6 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.options << '--line-numbers'
   rdoc.options << '--main=README.rdoc'
   rdoc.rdoc_files.include('README.rdoc')
-  rdoc.rdoc_files.include('CHANGELOG.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 

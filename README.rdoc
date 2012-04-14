@@ -90,7 +90,7 @@ Country information from {FAO}[http://www.fao.org]:
 
 === LinkedGeoData
 
-Geo information from {LinkedGeoData}[http://linkedgeodata.org]
+Geo information from {LinkedGeoData}[http://linkedgeodata.org]:
 
     >> # All nodes around the center of dresden, in a radius of 1000m
     >> @dresden = SemanticCrawler::LinkedGeoData::RelevantNodes.new(51.033333, 13.733333, 1000)

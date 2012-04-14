@@ -41,6 +41,7 @@ require "semantic_crawler/geo_names"
 
 # LinkedGeoData.org - module: LinkedGeoData
 require "semantic_crawler/linked_geo_data"
+require "semantic_crawler/linked_geo_data/relevant_nodes"
 require "semantic_crawler/linked_geo_data/relevant_node"
 
 # Fao.org - module: Fao

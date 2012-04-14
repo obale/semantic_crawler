@@ -11,7 +11,7 @@ to bypass complex NLP (natural language processing).
 * CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries
 * GDACS (see http://gdacs.org)
 * FAO - Food and Agriculture Organization of the United Nations (see http://www.fao.org)
-* [Started] LinkedGeoData - LGD (see http://linkedgeodata.org)
+* LinkedGeoData - LGD (see http://linkedgeodata.org)
 * [Started] Freebase (see http://freebase.com)
 
 === TODO
@@ -88,10 +88,19 @@ Country information from {FAO}[http://www.fao.org]:
     >> puts austria.name_currency("en")
     >> puts austria.official_name("es")
 
+=== LinkedGeoData
 
-== Changelog
+Geo information from {LinkedGeoData}[http://linkedgeodata.org]
 
-see CHANGELOG.rdoc
+    >> # All nodes around the center of dresden, in a radius of 1000m
+    >> @dresden = SemanticCrawler::LinkedGeoData::RelevantNodes.new(51.033333, 13.733333, 1000)
+    >> # Optional with type: SemanticCrawler::LinkedGeoData::RelevantNodes.new(51.033333, 13.733333, 1000, "TrafficSignals")
+    >> nodes = @dresden.relevant_nodes
+    >> nodes.each do |item|
+    >>      puts item.latitude
+    >>      puts item.longitude
+    >>      puts item.type
+    >> end
 
 
 == Tested with

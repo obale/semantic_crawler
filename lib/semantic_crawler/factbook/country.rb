@@ -118,6 +118,7 @@ module SemanticCrawler
                 end
             end
 
+            # @return [String] The document serialized as XML
             def xml_document
                 @doc.to_s
             end

@@ -8,15 +8,15 @@ to bypass complex NLP (natural language processing).
 
 == Supported Sources
 
-* CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries
-* GDACS (see http://gdacs.org)
-* FAO - Food and Agriculture Organization of the United Nations (see http://www.fao.org)
-* LinkedGeoData - LGD (see http://linkedgeodata.org)
-* [Started] Freebase (see http://freebase.com)
+* {Geonames}[http://www.geonames.org/]
+* {CIA Factbook RDF Dump}[http://www4.wiwiss.fu-berlin.de/factbook/directory/countries]
+* {FAO - Food and Agriculture Organization of the United Nations}[http://www.fao.org]
+* {LinkedGeoData - LGD}[http://linkedgeodata.org]
+* {GDACS}[http://gdacs.org]
+* [Started] {Freebase}[http://freebase.com]
 
 === TODO
 
-* Geonames
 * DBPedia
 * Different Government Sources
 

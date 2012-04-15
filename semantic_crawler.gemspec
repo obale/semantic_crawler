@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     s.add_dependency "json"
     #s.add_dependency "google-api-client" # Freebase API access
     s.add_dependency "nokogiri"           # XML Parsing
+    s.add_dependency "geonames"           # Use for the GeoNames module
 
     s.add_development_dependency "yard"
     s.add_development_dependency "rails", "~> 3.2.2"

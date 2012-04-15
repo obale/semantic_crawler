@@ -1,4 +1,4 @@
-= SemanticCrawler 
+= Ruby Semantic Crawler Library
 
 This project encapsulates data gathering from different sources.
 It simplifies the extension of internal data with public available

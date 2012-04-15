@@ -126,6 +126,16 @@ Geo information from {LinkedGeoData}[http://linkedgeodata.org]:
 * Ruby 1.9.3-p125 and Rails 3.2.2
 
 
+== Additional Links
+
+* {RubyGems}[http://rubygems.org/gems/semantic-crawler]
+* {RubyDoc}[http://rubydoc.info/gems/semantic-crawler/file/README.rdoc]
+* {GitHub}[https://github.com/obale/semantic_crawler]
+* {Travis CI}[http://travis-ci.org/#!/obale/semantic_crawler]
+* {Bugtracker}[https://github.com/obale/semantic_crawler/issues?sort=created&direction=desc&state=open]
+* {Wiki}[https://github.com/obale/semantic_crawler/wiki]
+
+
 == License
 
 (c) 2012 by Alex Oberhauser for {Sigimera}[http://www.sigimera.org],

@@ -45,7 +45,24 @@ Or from source:
 
 == Examples
 
+This examples are only a short outline how to use the library. For more
+information read the documentation or look into the source code. To use the
+library include or execute the following line:
+
     >> require "semantic_crawler"
+
+=== GeoNames
+
+The GeoNames module is able to return a Factbook::Country and Fao::Country
+module on the base of input GPS coordinates (lat/long).
+
+    >> @innsbruck = SemanticCrawler::GeoNames::Country.new(47.271338, 11.395333)
+    >> articles = @innsbruck.get_wikipedia_articles
+    >> articles.each do |article|
+    >>      puts article.wikipedia_url
+    >> end
+    >> factbook_obj = @innsbruck.get_factbook_country
+    >> fao_obj = @innsbruck.get_fao_country
 
 === Factbook
 

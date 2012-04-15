@@ -29,8 +29,8 @@ describe SemanticCrawler::GeoNames do
     end
 
     it "get fao country" do
-        factbook = @innsbruck.get_fao_country
-        factbook.country_name.to_s.should eq("Austria")
-        factbook.population_notes.to_s.should eq("2010 Revision from the UN Population Division")
+        fao = @innsbruck.get_fao_country
+        fao.country_name.to_s.should eq("Austria")
+        fao.population_notes.to_s.should eq("2010 Revision from the UN Population Division")
     end
 end

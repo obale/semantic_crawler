@@ -11,15 +11,19 @@ Gem::Specification.new do |s|
     s.email       = ["alex.oberhauser@sigimera.org"]
     s.homepage    = "https://github.com/obale/semantic_crawler"
     s.summary     = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources."
-    s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. Currently country information from Factbook and FAO (Food and Agriculture Organization of the United Nations), crisis information from GDACS.org and geo data from LinkedGeoData are supported."
+    s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. Currently country information from Factbook and FAO (Food and Agriculture Organization of the United Nations), crisis information from GDACS.org and geo data from LinkedGeoData are supported. Additional the GeoNames module allows to get Factbook and FAO country information from GPS coordinates."
 
-    s.files = Dir["{app,config,db,lib,log}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-    s.test_files = Dir["test/**/*"]
+    #s.files = Dir["{app,config,db,lib,log}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+    s.files = `git ls-files`.split("\n")
+    s.executables = `git ls-files -- bin/*`.split('\n').map{ |f| File.basename(f) }
+    s.test_files = Dir["{test,spec}/**/*"]
+    s.require_paths = ['lib']
 
     s.add_dependency "httparty"
     s.add_dependency "json"
     #s.add_dependency "google-api-client" # Freebase API access
     s.add_dependency "nokogiri"           # XML Parsing
+    s.add_dependency "geonames"           # Use for the GeoNames module
 
     s.add_development_dependency "yard"
     s.add_development_dependency "rails", "~> 3.2.2"

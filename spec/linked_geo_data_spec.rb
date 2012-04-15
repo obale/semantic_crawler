@@ -25,7 +25,6 @@ describe SemanticCrawler::LinkedGeoData do
             item.longitude.should be
             item.type.should be
             item.note.should be
-            puts item.note
             item.created_by.should be
             item.contributor.should be
 

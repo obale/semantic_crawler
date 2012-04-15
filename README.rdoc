@@ -1,4 +1,4 @@
-= SemanticCrawler {<img src="https://secure.travis-ci.org/obale/semantic_crawler.png?branch=master"/>}[http://travis-ci.org/#!/obale/semantic_crawler]
+= SemanticCrawler 
 
 This project encapsulates data gathering from different sources.
 It simplifies the extension of internal data with public available
@@ -8,15 +8,15 @@ to bypass complex NLP (natural language processing).
 
 == Supported Sources
 
-* CIA Factbook RDF Dump, see http://www4.wiwiss.fu-berlin.de/factbook/directory/countries
-* GDACS (see http://gdacs.org)
-* FAO - Food and Agriculture Organization of the United Nations (see http://www.fao.org)
-* LinkedGeoData - LGD (see http://linkedgeodata.org)
-* [Started] Freebase (see http://freebase.com)
+* {Geonames}[http://www.geonames.org/]
+* {CIA Factbook RDF Dump}[http://www4.wiwiss.fu-berlin.de/factbook/directory/countries]
+* {FAO - Food and Agriculture Organization of the United Nations}[http://www.fao.org]
+* {LinkedGeoData - LGD}[http://linkedgeodata.org]
+* {GDACS}[http://gdacs.org]
+* [Started] {Freebase}[http://freebase.com]
 
 === TODO
 
-* Geonames
 * DBPedia
 * Different Government Sources
 
@@ -45,7 +45,24 @@ Or from source:
 
 == Examples
 
+This examples are only a short outline how to use the library. For more
+information read the documentation or look into the source code. To use the
+library include or execute the following line:
+
     >> require "semantic_crawler"
+
+=== GeoNames
+
+The GeoNames module is able to return a Factbook::Country and Fao::Country
+module on the base of input GPS coordinates (lat/long).
+
+    >> @innsbruck = SemanticCrawler::GeoNames::Country.new(47.271338, 11.395333)
+    >> articles = @innsbruck.get_wikipedia_articles
+    >> articles.each do |article|
+    >>      puts article.wikipedia_url
+    >> end
+    >> factbook_obj = @innsbruck.get_factbook_country
+    >> fao_obj = @innsbruck.get_fao_country
 
 === Factbook
 
@@ -90,7 +107,7 @@ Country information from {FAO}[http://www.fao.org]:
 
 === LinkedGeoData
 
-Geo information from {LinkedGeoData}[http://linkedgeodata.org]
+Geo information from {LinkedGeoData}[http://linkedgeodata.org]:
 
     >> # All nodes around the center of dresden, in a radius of 1000m
     >> @dresden = SemanticCrawler::LinkedGeoData::RelevantNodes.new(51.033333, 13.733333, 1000)

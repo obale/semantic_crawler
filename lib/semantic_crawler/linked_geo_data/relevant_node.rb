@@ -23,33 +23,39 @@ module SemanticCrawler
             end
 
             # geo:lat
+            # @return [String]
             def latitude
-                query_root_node("geo:lat/text()", @@NAMESPACES)
+                query_root_node("geo:lat/text()", @@NAMESPACES).to_s
             end
 
             # geo:long
+            # @return [String]
             def longitude
-                query_root_node("geo:long/text()", @@NAMESPACES)
+                query_root_node("geo:long/text()", @@NAMESPACES).to_s
             end
 
             # The type as URL
+            # @return [String]
             def type
-                query_root_node("rdf:type/@rdf:resource", @@NAMESPACES)
+                query_root_node("rdf:type/@rdf:resource", @@NAMESPACES).to_s
             end
 
             # Comment about the entity
+            # @return [String]
             def note
-                query_root_node("lgdp:note/text()", @@NAMESPACES)
+                query_root_node("lgdp:note/text()", @@NAMESPACES).to_s
             end
 
             # Data Source
+            # @return [String]
             def created_by
-                query_root_node("lgdp:created_by/text()", @@NAMESPACES)
+                query_root_node("lgdp:created_by/text()", @@NAMESPACES).to_s
             end
 
             # User link
+            # @return [String]
             def contributor
-                query_root_node("lgdo:contributor/@rdf:resource", @@NAMESPACES)
+                query_root_node("lgdo:contributor/@rdf:resource", @@NAMESPACES).to_s
             end
 
             # Link to way 
@@ -58,33 +64,39 @@ module SemanticCrawler
             end
 
             # Street name
+            # @return [String]
             def has_street
-                query_root_node("lgdo:hasStreet/text()", @@NAMESPACES)
+                query_root_node("lgdo:hasStreet/text()", @@NAMESPACES).to_s
             end
 
             # Postal code
+            # @return [String]
             def has_postal_code
-                query_root_node("lgdo:hasPostalCode/text()", @@NAMESPACES)
+                query_root_node("lgdo:hasPostalCode/text()", @@NAMESPACES).to_s
             end
 
             # House number
+            # @return [String]
             def has_house_number
-                query_root_node("lgdo:hasHouseNumber/text()", @@NAMESPACES)
+                query_root_node("lgdo:hasHouseNumber/text()", @@NAMESPACES).to_s
             end
 
             # Country in ISO 3166-1 alpha-2
+            # @return [String]
             def has_country
-                query_root_node("lgdo:hasCountry/text()", @@NAMESPACES)
+                query_root_node("lgdo:hasCountry/text()", @@NAMESPACES).to_s
             end
 
             # City name
+            # @return [String]
             def has_city
-                query_root_node("lgdo:hasCity/text()", @@NAMESPACES)
+                query_root_node("lgdo:hasCity/text()", @@NAMESPACES).to_s
             end
 
             # Is this place wheelchair friendly?
+            # @return [String]
             def wheelchair
-                query_root_node("lgdo:wheelchair/@rdf:resource", @@NAMESPACES)
+                query_root_node("lgdo:wheelchair/@rdf:resource", @@NAMESPACES).to_s
             end
 
             # Query the root_node
@@ -95,6 +107,7 @@ module SemanticCrawler
             end
 
             # Outputs the document as XML
+            # @return [String] The document serialized as XML
             def xml_document
                 @root_node.to_s
             end

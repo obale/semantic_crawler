@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
 require "httparty"
+require "geonames"
 
 # The top level module contains the different data sources
 # as sub-modules. Currently there are the following modules
@@ -38,6 +39,7 @@ require "semantic_crawler/dbpedia"
 
 # GeoNames.org - module: GeoNames
 require "semantic_crawler/geo_names"
+require "semantic_crawler/geo_names/country"
 
 # LinkedGeoData.org - module: LinkedGeoData
 require "semantic_crawler/linked_geo_data"

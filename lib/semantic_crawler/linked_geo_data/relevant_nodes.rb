@@ -10,15 +10,19 @@ module SemanticCrawler
                 "rdf" => "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
             }
 
+            # @attribute [r]
             # The input latitude value
             attr_reader :latitude
 
+            # @attribute [r]
             # The input longitude value
             attr_reader :longitude
 
+            # @attribute [r]
             # The input radius value in meters
             attr_reader :radius
 
+            # @attribute [r]
             # The linkedgeodata.org link to the relevant nodes
             attr_reader :url
 
@@ -41,6 +45,7 @@ module SemanticCrawler
 
             # Returns an array of SemanticCrawler::LinkedGeoData::RelevantNode
             # objects
+            # @return [Array<SemanticCrawler::LinkedGeoData::RelevantNode>]
             def relevant_nodes
                 nodeset = query_root_node("rdf:Description", @@NAMESPACES)
                 @items = []
@@ -61,6 +66,7 @@ module SemanticCrawler
             end
 
             # Outputs the document as XML
+            # @return [String] The document serialized as XML
             def xml_document
                 @root_node.to_s
             end

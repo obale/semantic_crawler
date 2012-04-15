@@ -109,14 +109,14 @@ module SemanticCrawler
             # The currency name.
             # @param [String] The language in which the currency name should be returned
             # @return [String]
-            def name_currency(lang)
+            def name_currency(lang = 'en')
                 query_root_node("fao:nameCurrency[@xml:lang='#{lang}']/text()", @@NAMESPACES).to_s
             end
 
             # The official country name
             # @param [String] The language in which the official name should be returned
             # @return [String]
-            def official_name(lang)
+            def official_name(lang = 'en')
                 query_root_node("fao:nameOfficial[@xml:lang='#{lang}']/text()", @@NAMESPACES).to_s
             end
 

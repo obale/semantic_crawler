@@ -12,11 +12,6 @@ describe SemanticCrawler::Fao do
         wrongCountry.url.should eq(nil)
     end
 
-    it "test unknown country" do
-        wrongCountry = SemanticCrawler::Fao::Country.new("xyz")
-        wrongCountry.url.nil?.should == true
-    end
-
     it "check austria object" do
         @obj.country_name.should.eql?("Austria")
         @obj.url.should eq("http://www.fao.org/countryprofiles/geoinfo/geopolitical/data/Austria")

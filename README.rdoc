@@ -120,7 +120,7 @@ Geo information from {LinkedGeoData}[http://linkedgeodata.org]:
     >> end
 
 
-== Freebase
+=== Freebase
 
 Freebase.com country information:
 

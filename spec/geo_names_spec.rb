@@ -33,4 +33,10 @@ describe SemanticCrawler::GeoNames do
         fao.country_name.to_s.should eq("Austria")
         fao.population_notes.to_s.should eq("2010 Revision from the UN Population Division")
     end
+
+    it "get freebase country" do
+        freebase = @innsbruck.get_freebase_country
+        freebase.country_name.to_s.should eq("Austria")
+        freebase.website.should eq("http://www.austria.gv.at/")
+    end
 end

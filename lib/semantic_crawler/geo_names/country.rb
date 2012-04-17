@@ -43,6 +43,10 @@ module SemanticCrawler
                 SemanticCrawler::Fao::Country.new get_country_name
             end
 
+            # @return [SemanticCrawler::Freebase::Country] A Freebase country object
+            def get_freebase_country
+                SemanticCrawler::Freebase::Country.new get_country_name
+            end
         end
     end
 end

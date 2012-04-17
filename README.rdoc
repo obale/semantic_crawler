@@ -13,7 +13,7 @@ to bypass complex NLP (natural language processing).
 * {FAO - Food and Agriculture Organization of the United Nations}[http://www.fao.org]
 * {LinkedGeoData - LGD}[http://linkedgeodata.org]
 * {GDACS}[http://gdacs.org]
-* [Started] {Freebase}[http://freebase.com]
+* {Freebase}[http://freebase.com]
 
 === TODO
 
@@ -56,13 +56,13 @@ library include or execute the following line:
 The GeoNames module is able to return a Factbook::Country and Fao::Country
 module on the base of input GPS coordinates (lat/long).
 
-    >> @innsbruck = SemanticCrawler::GeoNames::Country.new(47.271338, 11.395333)
-    >> articles = @innsbruck.get_wikipedia_articles
+    >> innsbruck = SemanticCrawler::GeoNames::Country.new(47.271338, 11.395333)
+    >> articles = innsbruck.get_wikipedia_articles
     >> articles.each do |article|
     >>      puts article.wikipedia_url
     >> end
-    >> factbook_obj = @innsbruck.get_factbook_country
-    >> fao_obj = @innsbruck.get_fao_country
+    >> factbook_obj = innsbruck.get_factbook_country
+    >> fao_obj = innsbruck.get_fao_country
 
 === Factbook
 
@@ -118,6 +118,18 @@ Geo information from {LinkedGeoData}[http://linkedgeodata.org]:
     >>      puts item.longitude
     >>      puts item.type
     >> end
+
+
+== Freebase
+
+Freebase.com country information:
+
+    >> country = SemanticCrawler::Freebase::Country.new("Austria")
+    >> links = country.same_as
+    >> links.each do |link|
+    >>      be_valid link.start_with?("http")
+    >> end
+    >> puts country.website
 
 
 == Tested with

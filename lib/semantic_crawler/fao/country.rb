@@ -25,7 +25,7 @@ module SemanticCrawler
             def initialize(new_country_name)
                 @country_name = new_country_name
                 if !@country_name.nil?
-                    @url = @@URI_PREFIX + @country_name.gsub(" ", "_").gsub("USA", "United_States")
+                    @url = @@URI_PREFIX + @country_name.gsub(" ", "_").gsub("USA", "United_States_of_America")
                     @root_node = nil
                     begin
                         fetch_rdf

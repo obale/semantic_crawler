@@ -6,10 +6,10 @@ describe SemanticCrawler::Fao do
         @obj = SemanticCrawler::Fao::Country.new("Austria")
     end
 
-    it "init empty country object" do
-        @obj = SemanticCrawler::Fao::Country.new(nil)
-        @obj.country_name.should.eql?(nil)
-        @obj.url.should eq(nil)
+    it "test nil country" do
+        wrongCountry = SemanticCrawler::Fao::Country.new(nil)
+        wrongCountry.country_name.should.eql?(nil)
+        wrongCountry.url.should eq(nil)
     end
 
     it "check austria object" do

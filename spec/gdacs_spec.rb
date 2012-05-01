@@ -78,6 +78,7 @@ describe SemanticCrawler::Gdacs do
             resources = item.resources
             resources.each do |resource|
                 be_valid !resource.title.to_s.empty?
+                puts resource.url.to_s
                 be_valid !resource.url.to_s.empty?
                 be_valid !resource.type.to_s.empty?
                 be_valid !resource.description.nil?

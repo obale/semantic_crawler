@@ -17,7 +17,7 @@ module SemanticCrawler
 
             # Returns the resource URL
             def url
-                query_root_node("@url", @@NAMESPACES)
+                query_root_node("@url", @@NAMESPACES).to_s.gsub("[gdacs]", "http://www.gdacs.org")
             end
 
             # Returns the gdacs:title
@@ -28,6 +28,11 @@ module SemanticCrawler
             # Returns the type (attribute in gdacs:resource)
             def type
                 query_root_node("@type")
+            end
+
+            # Returns the source organization abbreviation ('source' attribute in gdacs:resource)
+            def source
+                query_root_node("@source")
             end
 
             # [OPTIONAL] Returns the gdacs:description

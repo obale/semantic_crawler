@@ -83,6 +83,7 @@ describe SemanticCrawler::Gdacs do
                 be_valid !resource.description.nil?
                 be_valid !resource.accesslevel.nil?
                 be_valid !resource.xslt.nil?
+                be_valid !resource.source.nil?
                 be_valid !resource.acknowledgements.nil?
             end
         end

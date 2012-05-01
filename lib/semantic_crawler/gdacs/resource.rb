@@ -30,6 +30,11 @@ module SemanticCrawler
                 query_root_node("@type")
             end
 
+            # Returns the source organization abbreviation ('source' attribute in gdacs:resource)
+            def source
+                query_root_node("@source")
+            end
+
             # [OPTIONAL] Returns the gdacs:description
             def description
                 query_root_node("gdacs:description/text()", @@NAMESPACES)

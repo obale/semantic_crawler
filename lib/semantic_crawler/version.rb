@@ -1,4 +1,4 @@
 module SemanticCrawler
     # The current version of this library.
-    VERSION = "0.4.1"
+    VERSION = "0.5.0"
 end

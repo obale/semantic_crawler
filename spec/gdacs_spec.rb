@@ -89,7 +89,7 @@ describe SemanticCrawler::Gdacs do
         end
     end
 
-	it "test kml file" do
+	xit "test kml file" do
         kmlFile = SemanticCrawler::Gdacs::KmlFile.new
 		kmlFile.name.to_s.should_not be_empty
 		puts kmlFile.placemark("EQ_117653")

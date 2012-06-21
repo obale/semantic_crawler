@@ -7,17 +7,17 @@ describe SemanticCrawler::LinkedGeoData do
         #@dresden = SemanticCrawler::LinkedGeoData::RelevantNodes.new(51.033333, 13.733333, 1000, "TrafficSignals")
     end
 
-    it "check lat/long/radius of dresden" do
+    xit "check lat/long/radius of dresden" do
         @dresden.latitude.to_s.should eq("51.033333")
         @dresden.longitude.to_s.should eq("13.733333")
         @dresden.radius.to_s.should eq("1000")
     end
 
-    it "output xml dump " do
+    xit "output xml dump " do
         @dresden.xml_document.size.should > 0
     end
 
-    it "check single relevant node entries" do
+    xit "check single relevant node entries" do
         nodes = @dresden.relevant_nodes
         nodes.each do |item|
             item.xml_document.size.should > 0

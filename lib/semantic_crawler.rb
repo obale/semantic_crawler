@@ -33,6 +33,7 @@ require "semantic_crawler/gdacs/feed_item.rb"
 require "semantic_crawler/gdacs/resource.rb"
 require "semantic_crawler/gdacs/emergency_feed.rb"
 require "semantic_crawler/gdacs/emergency_feed_item.rb"
+require "semantic_crawler/gdacs/kml_file.rb"
 
 # DBPedia - module: Dbpedia
 require "semantic_crawler/dbpedia"

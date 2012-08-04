@@ -17,13 +17,13 @@ module SemanticCrawler
             }
 
             # The gdacs.org RSS feed URL. (default:
-            # http://new.gdacs.org/xml/rss.xml)
+            # http://www.gdacs.org/xml/rss.xml)
             attr_reader :url
 
             # Initializes the gdacs.org feed URL. If not specified the default
-            # URL (http://new.gdacs.org/xml/rss.xml) is used. Normally the
+            # URL (http://www.gdacs.org/xml/rss.xml) is used. Normally the
             # feed URL should not be changed.
-            def initialize(new_url = "http://new.gdacs.org/xml/rss.xml")
+            def initialize(new_url = "http://www.gdacs.org/xml/rss.xml")
                 @url = new_url
                 @root_node = nil
                 begin

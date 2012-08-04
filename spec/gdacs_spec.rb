@@ -67,8 +67,13 @@ describe SemanticCrawler::Gdacs do
             be_valid !item.eventid.nil?
             be_valid !item.episodeid.nil?
             be_valid !item.severity.nil?
+            be_valid !item.severity_value.nil?
+            be_valid !item.severity_unit.nil?
             be_valid !item.population.nil?
+            be_valid !item.population_value.nil?
+            be_valid !item.population_value.nil?
             be_valid !item.vulnerability.nil?
+            be_valid !item.vulnerability_value.nil?
             be_valid !item.country.nil?
             be_valid !item.iso3.nil?
             be_valid !item.glide.nil?
@@ -88,6 +93,14 @@ describe SemanticCrawler::Gdacs do
             end
         end
     end
+
+	xit "test kml file" do
+        kmlFile = SemanticCrawler::Gdacs::KmlFile.new
+		kmlFile.name.to_s.should_not be_empty
+		puts kmlFile.placemark("EQ_117653")
+		puts "----"
+		puts kmlFile.placemark("EQ_117653_Intensity")
+	end
 
     it "test emergency feed" do
         noFeed = SemanticCrawler::Gdacs::EmergencyFeed.new(nil)

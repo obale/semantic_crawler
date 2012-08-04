@@ -5,7 +5,7 @@ module SemanticCrawler
         # One crisis entity with related resources. Could be one of the
         # following crisis types:
         #
-        # * Floods 
+        # * Floods
         # * Earthquakes
         # * Tropical Cyclones
         # * Volcanoes
@@ -124,14 +124,39 @@ module SemanticCrawler
                 query_root_node("gdacs:severity/text()", @@NAMESPACES)
             end
 
+            # Returns the severity value (without further text)
+            def severity_value
+                query_root_node("gdacs:severity/@value", @@NAMESPACES)
+            end
+
+            # Returns the severity unit (without further text)
+            def severity_unit
+                query_root_node("gdacs:severity/@unit", @@NAMESPACES)
+            end
+
             # Returns the population as human readable string
             def population
                 query_root_node("gdacs:population/text()", @@NAMESPACES)
             end
 
+            # Returns the population value (without further text)
+            def population_value
+                query_root_node("gdacs:population/@value", @@NAMESPACES)
+            end
+
+            # Returns the population unit (without further text)
+            def population_unit
+                query_root_node("gdacs:population/@unit", @@NAMESPACES)
+            end
+
             # Returns the vulnerability as human readable string
             def vulnerability
                 query_root_node("gdacs:vulnerability/text()", @@NAMESPACES)
+            end
+
+            # Returns the vulnerability as number
+            def vulnerability_value
+                query_root_node("gdacs:vulnerability/@value", @@NAMESPACES)
             end
 
             # Returns the country iso3 code if available

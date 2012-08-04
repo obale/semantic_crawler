@@ -32,7 +32,7 @@ module SemanticCrawler
             #   >> austria = SemanticCrawler::Factbook::Country.new("austria")
             #   >> puts austria.background
             #
-            # Argumenst:
+            # Arguments:
             #   new_country_name: (String)
             def initialize(new_country_name)
                 if !new_country_name.nil?

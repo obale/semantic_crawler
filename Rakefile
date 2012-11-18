@@ -13,7 +13,6 @@ rescue LoadError
 end
 
 require 'rake'
-require 'rspec/core/rake_task'
 
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
@@ -38,6 +37,11 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-RSpec::Core::RakeTask.new(:spec)
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec) do |t|
+    t.fail_on_error = true
+    t.rspec_opts = "--colour --format doc"
+end
+
 
 task :default => [ :test, :spec ]

@@ -28,7 +28,8 @@ module Extractor
       hash
     end
 
-    def get_microdata_json(doc)
+    def get_microdata_json(url)
+      doc = Nokogiri::HTML(open(url))
       microdata = Microdata::Document.new(doc.to_s)
       items = microdata.extract_items
       extract_microdata(items)
@@ -36,8 +37,6 @@ module Extractor
 
     def extractLink(url)
       doc = Nokogiri::HTML(open(url))
-
-      ap get_microdata_json(doc)
 
       doc.css('link').each do |node|
         if !node['type'].nil?
@@ -81,6 +80,10 @@ end
 url = "https://www.alex-oberhauser.com"
 
 html = Extractor::HTMLParser.new
-html.extractLink url
+#html.extractLink url
+json = html.get_microdata_json(url)
+ap json
+ap json["http://schema.org/Organization"].size == 3
+ap json["http://schema.org/EducationalOrganization"].size == 2
 #puts "-------------"
 #html.extractMeta url

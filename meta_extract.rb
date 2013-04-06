@@ -13,7 +13,6 @@ module Extractor
         hash = items
       elsif items.kind_of? Array and items.first
         items.each do |item|
-          puts item.type.first
           props = item.properties
           properties = Hash.new
           props.each do |key, value|
@@ -29,15 +28,16 @@ module Extractor
       hash
     end
 
+    def get_microdata_json(doc)
+      microdata = Microdata::Document.new(doc.to_s)
+      items = microdata.extract_items
+      extract_microdata(items)
+    end
+
     def extractLink(url)
       doc = Nokogiri::HTML(open(url))
 
-      microdata_json = Hash.new
-
-      microdata = Microdata::Document.new(doc.to_s)
-      items = microdata.extract_items
-      json = extract_microdata(items)
-      ap json
+      ap get_microdata_json(doc)
 
       doc.css('link').each do |node|
         if !node['type'].nil?
@@ -81,6 +81,6 @@ end
 url = "https://www.alex-oberhauser.com"
 
 html = Extractor::HTMLParser.new
-#html.extractLink url
+html.extractLink url
 #puts "-------------"
 #html.extractMeta url

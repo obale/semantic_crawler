@@ -2,6 +2,8 @@
 
 require "httparty"
 require "geonames"
+require "nokogiri"
+require "microdata"
 
 # The top level module contains the different data sources
 # as sub-modules. Currently there are the following modules
@@ -54,3 +56,6 @@ require "semantic_crawler/fao/country"
 # Freebase.com - module: Freebase
 require "semantic_crawler/freebase/country"
 
+# Websites - module: Websites
+require "semantic_crawler/websites"
+require "semantic_crawler/websites/micro_data"

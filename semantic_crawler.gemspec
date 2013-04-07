@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
     s.email       = ["alex.oberhauser@sigimera.org"]
     s.licenses    = ["MIT"]
     s.homepage    = "https://github.com/obale/semantic_crawler"
-    s.summary     = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources."
-    s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. Currently country information from Freebase, Factbook and FAO (Food and Agriculture Organization of the United Nations), crisis information from GDACS.org and geo data from LinkedGeoData are supported. Additional the GeoNames module allows to get Factbook and FAO country information from GPS coordinates."
+    s.summary     = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources, e.g. microdata from websites."
+    s.description = "SemanticCrawler is a ruby library that encapsulates data gathering from different sources. Currently microdata from websites, country information from Freebase, Factbook and FAO (Food and Agriculture Organization of the United Nations), crisis information from GDACS.org and geo data from LinkedGeoData are supported. Additional the GeoNames module allows to get Factbook and FAO country information from GPS coordinates."
 
     s.files = `git ls-files`.split("\n")
     s.executables = `git ls-files -- bin/*`.split('\n').map{ |f| File.basename(f) }

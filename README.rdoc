@@ -14,6 +14,7 @@ to bypass complex NLP (natural language processing).
 * {LinkedGeoData - LGD}[http://linkedgeodata.org]
 * {GDACS}[http://gdacs.org]
 * {Freebase}[http://freebase.com]
+* Microdata on Websites, e.g. annotated with {schema.org}[http://schema.org/] vocabulary
 
 === TODO
 

@@ -51,6 +51,21 @@ library include or execute the following line:
 
     >> require "semantic_crawler"
 
+=== Microdata from Website
+
+Extract in an easy way microdata, e.g. with schema.org vocabulary, from websites.
+
+    >>> microdata = SemanticCrawler::Websites::MicroData.new("https://www.alex-oberhauser.com")
+    >>> org = microdata.to_s['http://schema.org/Organization'][1]
+    >>> puts org['name']
+    "Sigimera Ltd."
+    >>> puts org['url']
+    "http://www.sigimera.com"
+    >>> puts org['employee']['http://schema.org/Person'].first['name']
+    "Alex Oberhauser"
+    >>> puts org['employee']['http://schema.org/Person'].first['jobTitle']
+    "Co-Founder & CEO"
+
 === GeoNames
 
 The GeoNames module is able to return a Factbook::Country and Fao::Country

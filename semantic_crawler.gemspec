@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     #s.add_dependency "google-api-client" # Freebase API access
     s.add_dependency "nokogiri"           # XML Parsing
     s.add_dependency "geonames"           # Use for the GeoNames module
+    s.add_dependency "microdata"
 
     s.add_development_dependency "yard"
     s.add_development_dependency "grit"
@@ -32,5 +33,7 @@ Gem::Specification.new do |s|
     s.add_development_dependency "rspec"
     s.add_development_dependency "simplecov"
     s.add_development_dependency "simplecov-rcov"
+    s.add_development_dependency "pry"
+    s.add_development_dependency "awesome_print"
 
 end
